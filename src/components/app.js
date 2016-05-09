@@ -4,9 +4,9 @@ let App = React.createClass({
     render: function() {
         return (
             <div>
-                <h1>MADE CHANGES ESSSSSE</h1>
-            </div>
+                <h1>Changes</h1>
 
+            </div>
         );
     }
 });

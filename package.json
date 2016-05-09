@@ -10,9 +10,13 @@
     "start": "node ./src/app.js"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "express": "^4.13.4",
+    "immutable": "^3.8.1",
+    "lodash": "^4.12.0",
     "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel": "^6.5.2",
