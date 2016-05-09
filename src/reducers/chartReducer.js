@@ -21,7 +21,7 @@ function chartReducer(state, action) {
 
         case 'get_data':
             console.log(action.payload);
-            return state;
+            return action.payload;
 
 
         default:
@@ -59,10 +59,13 @@ let actions = {
 
     get_data_action() {
         return (dispatch, getstate) => {
-            console.log("Fetching Data");
+          let newState = getstate();
+          _.set(newState, 'chartData', [4, 8, 15, 16, 23, 42]);
+
+            console.log('%c NEW STATE FROM get_data_action','background: yellow;', newState);
             dispatch({
                 type: 'get_data',
-                payload: 'Async Data recieved succesfully'
+                payload: newState
             });
         };
     },

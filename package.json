@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "d3": "^3.5.17",
     "express": "^4.13.4",
     "immutable": "^3.8.1",
     "lodash": "^4.12.0",
