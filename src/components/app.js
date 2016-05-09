@@ -1,11 +1,11 @@
 import React from 'react';
+import Chart from './chart'
 
 let App = React.createClass({
     render: function() {
         return (
             <div>
-                <h1>Changes</h1>
-
+                <Chart/>
             </div>
         );
     }

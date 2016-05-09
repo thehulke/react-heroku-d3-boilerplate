@@ -1,7 +1,15 @@
 @import "reset";
+@import "fonts";
+@import "chart";
 
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
 #main{
-  background: #fed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: #fed;
   height: 100%;
 }
 h1 {
