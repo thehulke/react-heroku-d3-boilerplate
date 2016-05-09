@@ -4,7 +4,7 @@ let App = React.createClass({
     render: function() {
         return (
             <div>
-                <h1>Hello World</h1>
+                <h1>MADE CHANGES ESSSSSE</h1>
             </div>
 
         );

@@ -1,6 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
 
+//APPLY LINE BELOW BEFORE PRODUCTION
+process.env.NODE_ENV = 'production';
+
 module.exports = {
     devtool: 'source-map',
 
