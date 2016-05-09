@@ -60,7 +60,7 @@ let actions = {
     get_data_action() {
         return (dispatch, getstate) => {
           let newState = getstate();
-          _.set(newState, 'chartData', [4, 8, 15, 16, 23, 42]);
+          _.set(newState, 'chartData', [ 1, 2, 4, 11, 13, 17, 18, 19, 20, 21, 22, 24, 26, 31, 36, 25, 22, 14, 28, 39,30, 22]);
 
             console.log('%c NEW STATE FROM get_data_action','background: yellow;', newState);
             dispatch({
