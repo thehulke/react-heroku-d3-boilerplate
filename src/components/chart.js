@@ -7,6 +7,12 @@ const Chart = React.createClass({
         return this.stateFromStore();
     },
 
+
+    /**
+     * stateFromStore - Getting state from the chartReducer store, and applying it this component state
+     *
+     * @return {object}  state
+     */
     stateFromStore() {
         let state = chartReducer.store.getState();
         if (state.chartData) {
@@ -15,6 +21,7 @@ const Chart = React.createClass({
 
         return state
     },
+
 
     componentDidMount() {
         this.unsubscribe = chartReducer.store.subscribe(() => {
@@ -27,8 +34,14 @@ const Chart = React.createClass({
     },
 
     //#TODO: Build the Chartin the buildChart function
+
+    /**
+     * buildChart - Building the chart main component using D3js
+     *
+     * @param  {object} data data shown in the DOM,
+     * @return {null}      success
+     */
     buildChart(data) {
-        console.log('Building Chart With d3');
         let rule = d3.scale.linear()
         .domain([0,d3.max(data)])
         .range([0, 420]);
@@ -44,11 +57,14 @@ const Chart = React.createClass({
           return d;
         })
 
-
-
-
         //Work In Progress
     },
+
+    /**
+     * dispatchAsyncAction - testing async data fetching from the chartReducer store & the middlewere
+     *
+     * @return {function}  store action dispatcher     
+     */
     dispatchAsyncAction() {
         return chartReducer.store.dispatch(chartReducer.actions.get_data_action());
     },

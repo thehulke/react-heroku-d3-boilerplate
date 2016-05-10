@@ -9,6 +9,13 @@ const initialState = {
 };
 
 
+/**
+ * chartReducer - filtering the action type to dispatch, if no state provided, it returns the default initialState ojbect.
+ *
+ * @param  {object} state  the component state which the reducer will work upon
+ * @param  {string} action the action to dispatch
+ * @return {object}        the state which will be returned to the component.
+ */
 function chartReducer(state, action) {
     if (!state) {
         return initialState;
@@ -31,6 +38,14 @@ function chartReducer(state, action) {
 }
 // End of ChartReducer
 
+
+/**
+ * thunkMiddleware - middlware, the function that is used to omit async actions correctly.
+ *                   this middlware will be activated with the chartReducer.
+ *
+ * @param  {object} data data to operate on.
+ * @return {function}
+ */
 function thunkMiddleware(data) {
     var dispatch = data.dispatch;
     var getState = data.getState;
@@ -44,7 +59,13 @@ function thunkMiddleware(data) {
 
 let createStoreWithThunk = applyMiddleware(thunkMiddleware)(createStore);
 let store = createStoreWithThunk(chartReducer);
+
+
+/**
+ * reducer's actions
+ */
 let actions = {
+
     test_action() {
 
         return {
