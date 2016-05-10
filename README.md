@@ -1,7 +1,6 @@
 # Deployable React Heroku boilerplate using Node.js
 
 ## Read before using this boilerplate
---------
 ## Main Tech.
 - React
 - Node.js
